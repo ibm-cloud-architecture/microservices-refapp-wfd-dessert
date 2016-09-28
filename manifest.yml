@@ -1,0 +1,3 @@
+applications:
+- name: microservices-refapp-wfd-dessert
+  memory: 256M
