@@ -1,10 +1,7 @@
 spring:
   application:
     name: dessert-service
-#  cloud:
-#    client:
-#      hostname: localhost
-
+    
 server:
   port: 8083
 
