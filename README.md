@@ -1,4 +1,4 @@
-###### microservices-refapp-wfd-dessert
+###### refarch-cloudnative-wfd-dessert
 
 ### Microservices Reference Application - What's For Dinner Dessert Service
 
@@ -24,7 +24,7 @@ You can use cURL or Chrome POSTMAN to send get/post/put/delete requests to the a
 1. Clone git repository.
     ```
     git clone https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-dessert
-    cd microservices-refapp-wfd-dessert
+    cd refarch-cloudnative-wfd-dessert
     ```
 
 2. Build the application.  A utility script is provided to easily build using either Gradle (default) or Maven.  You can optionally specify the `-d` parameter to build the associated Docker image as well.
@@ -105,13 +105,13 @@ In this section you will deploy the Spring Boot application to run in a local do
     ```
     cf push -p build/libs/wfd-dessert-0.0.1-SNAPSHOT.jar -d mybluemix.net -n wfd-dessert-{your-bluemix-user-id} --no-start
 
-    cf set-env microservices-refapp-wfd-dessert SPRING_PROFILES_ACTIVE cloud
+    cf set-env wfd-dessert SPRING_PROFILES_ACTIVE cloud
 
-    cf bind-service microservices-refapp-wfd-dessert eureka-service-discovery
+    cf bind-service wfd-dessert eureka-service-discovery
 
-    cf restage microservices-refapp-wfd-dessert
+    cf restage wfd-dessert
 
-    cf start microservices-refapp-wfd-dessert
+    cf start wfd-dessert
     ```
 
 6. Validate.  
