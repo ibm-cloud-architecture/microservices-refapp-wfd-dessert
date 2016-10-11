@@ -1,9 +1,9 @@
 spring:
   application:
     name: dessert-service
-    
+
 server:
-  port: 8083
+  port: ${vcap.application.port:8083}
 
 eureka:
   client:
