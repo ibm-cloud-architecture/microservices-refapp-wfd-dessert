@@ -6,6 +6,9 @@
 /.project
 /.settings
 /.factorypath
+/.bluemix
+/.cfignore
+/.dockerignore
 
 /caches
 /local.properties
