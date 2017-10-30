@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: "refarchcloudnativewfddessert-service"
+  name: "wfddessert-service"
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
@@ -15,12 +15,12 @@ spec:
     port: 9443
 
   selector:
-    app: "refarchcloudnativewfddessert-selector"
+    app: "wfddessert-selector"
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: "refarchcloudnativewfddessert-deployment"
+  name: "wfddessert-deployment"
 spec:
   # this replicas value is default
   # modify it according to your case
@@ -28,14 +28,14 @@ spec:
   template:
     metadata:
       labels:
-        app: "refarchcloudnativewfddessert-selector"
+        app: "wfddessert-selector"
     spec:
       containers:
-      - name: refarchcloudnativewfddessert
-        image: refarchcloudnativewfddessert:latest
+      - name: wfddessert
+        image: wfddessert:latest
         readinessProbe:
           httpGet:
-            path: /refarchcloudnativewfddessert/health
+            path: /WfdDessert/health
             port: 9080
           initialDelaySeconds: 20
         # resources:
