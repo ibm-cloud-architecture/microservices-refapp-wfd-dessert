@@ -9,6 +9,7 @@
 /.bluemix
 /.cfignore
 /.dockerignore
+/.ibm-project
 
 /caches
 /local.properties
