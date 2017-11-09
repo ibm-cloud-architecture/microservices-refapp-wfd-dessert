@@ -32,10 +32,10 @@ spec:
     spec:
       containers:
       - name: wfddessert
-        image: wfddessert:latest
+        image: wfddessert:v1.0.0
         readinessProbe:
           httpGet:
-            path: /WfdDessert/health
+            path: /WfdDessert/rest/dessert
             port: 9080
           initialDelaySeconds: 20
         # resources:
