@@ -2,18 +2,9 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
-  zipkin:
-    baseUrl: http://localhost:9411
 
 server:
   port: 8083
-
-eureka:
-  client:
-    serviceUrl:
-       defaultZone: http://localhost:8761/eureka/
-  instance:
-    preferIpAddress: true
 
 wfd:
   dessert:
@@ -23,11 +14,3 @@ wfd:
       - Chocolate Cake
       - Banoffee
       - Ice Cream
-
----
-#spring:
-#  profiles: cloud
-#eureka:
-#  instance:
-#    nonSecurePort: 80
-#    preferIpAddress: false
