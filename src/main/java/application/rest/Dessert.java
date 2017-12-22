@@ -8,17 +8,9 @@ import javax.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 public class Dessert {
-	
-	  @Inject
-	  @ConfigProperty(name="order")
-   	  private int order;
 
-	  @Inject
-	  @ConfigProperty(name="menu")
+	  private int order;
 	  private List<String> menu;
-
-	  @Inject
-	  @ConfigProperty(name="type")
 	  private String type;
 
 	  public Dessert(){
